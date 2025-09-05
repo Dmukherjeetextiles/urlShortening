@@ -1,31 +1,54 @@
-# urlShortening
-Shortens the url; single or multiple(presented in a csv with "URL" column name.)
+# URL Shortener
 
+A simple yet powerful URL shortener application built with Streamlit. This tool can shorten a single URL or process a CSV file to shorten multiple URLs in bulk.
 
-https://multiurlshortening.streamlit.app/
+Visit the live application: https://multiurlshortening.streamlit.app/
 
+## Features
 
-It provides the following features:
+-   **Single URL Shortening**: Quickly shorten a single URL.
+-   **Bulk URL Shortening**: Upload a CSV file with a "URL" column to shorten multiple URLs at once.
+-   **Download Results**: Download the processed CSV file with the shortened URLs.
 
-- Shorten a single URL by entering it in the input field.
-- Upload a CSV file containing multiple URLs to shorten them in bulk.
-- Download the updated CSV file with shortened URLs.
+## Project Structure
+
+```
+urlShortening/
+├── .github/
+│   └── workflows/
+│       └── python-app.yml
+├── .gitignore
+├── app/
+│   ├── __init__.py
+│   ├── core.py
+│   ├── main.py
+│   └── utils.py
+├── tests/
+│   ├── __init__.py
+│   └── test_core.py
+├── LICENSE
+├── README.md
+|── requirements.txt
+└── run_app.py
+```
 
 ## Installation
 
-1. Clone the repository:
+1.  **Clone the repository:**
 
     ```bash
     git clone https://github.com/Dmukherjeetextiles/urlShortening.git
+    cd urlShortening
     ```
 
-2. Navigate to the project directory:
+2.  **Create and activate a virtual environment:**
 
     ```bash
-    cd url-shortener-app
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
     ```
 
-3. Install the required dependencies:
+3.  **Install the dependencies:**
 
     ```bash
     pip install -r requirements.txt
@@ -33,26 +56,32 @@ It provides the following features:
 
 ## Usage
 
-1. Run the Streamlit app:
+1.  **Run the Streamlit application:**
 
     ```bash
-    streamlit run bitly.py
+    streamlit run run-app.py
     ```
 
-2. Open the provided URL in your web browser.
+2.  Open the URL provided by Streamlit in your web browser.
 
-3. Use the input field to shorten a single URL or upload a CSV file containing multiple URLs.
+3.  To shorten a single URL, enter it in the text input field and click "Shorten".
 
-4. Click the "Shorten" button to shorten the URL(s) and view the results.
+4.  To shorten multiple URLs, upload a CSV file that contains a column named "URL".
 
-5. If a CSV file was uploaded, you can download the updated CSV file with shortened URLs using the provided download button.
+5.  The results will be displayed on the page, and you can download the CSV file with the shortened URLs.
 
-## File Structure
+## Running Tests
 
-- `bitly.py`: The main Streamlit application script containing the app logic(I have a bad naming sense).
-- `requirements.txt`: A list of Python dependencies required to run the app.
-- `README.md`: This file provides information about the app.
+To run the tests, execute the following command from the root directory:
+
+```bash
+pytest
+```
+
+## Contributing
+
+Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/Dmukherjeetextiles/urlShortening/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
