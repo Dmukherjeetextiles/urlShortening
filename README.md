@@ -2,7 +2,7 @@
 
 A simple yet powerful URL shortener application built with Streamlit. This tool can shorten a single URL or process a CSV file to shorten multiple URLs in bulk.
 
-Visit the live application: https://multiurlshortening.streamlit.app/
+
 
 ## Features
 
@@ -59,7 +59,7 @@ urlShortening/
 1.  **Run the Streamlit application:**
 
     ```bash
-    streamlit run run-app.py
+    streamlit run run_app.py
     ```
 
 2.  Open the URL provided by Streamlit in your web browser.
